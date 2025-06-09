@@ -51,6 +51,26 @@
             "name": "msvc_release",
             "inherits": "common_release",
             "generator": "Visual Studio 17 2022"
+        },
+        {
+            "name": "codespaces_debug",
+            "inherits": "common_debug",
+            "generator": "Unix Makefiles"
+        },
+        {
+            "name": "codespaces_release",
+            "inherits": "common_release",
+            "generator": "Unix Makefiles"
+        },
+        {
+            "name": "linux_debug",
+            "inherits": "common_debug",
+            "generator": "Unix Makefiles"
+        },
+        {
+            "name": "linux_release",
+            "inherits": "common_release",
+            "generator": "Unix Makefiles"
         }
     ],
     "buildPresets": [
@@ -77,12 +97,28 @@
         {
             "name": "msvc_release",
             "configurePreset": "msvc_release"
+        },
+        {
+            "name": "codespaces_debug",
+            "configurePreset": "codespaces_debug"
+        },
+        {
+            "name": "codespaces_release",
+            "configurePreset": "codespaces_release"
+        },
+        {
+            "name": "linux_debug",
+            "configurePreset": "linux_debug"
+        },
+        {
+            "name": "linux_release",
+            "configurePreset": "linux_release"
         }
     ],
     "testPresets": [
         {
-            "name": "mac_debug",
-            "configurePreset": "mac_debug",
+            "name": "test_common",
+            "hidden": true,
             "output": {
                 "outputOnFailure": true
             },
@@ -90,61 +126,56 @@
                 "noTestsAction": "error",
                 "stopOnFailure": true
             }
+        },
+        {
+            "name": "mac_debug",
+            "inherits": "test_common",
+            "configurePreset": "mac_debug"
         },
         {
             "name": "mac_release",
-            "configurePreset": "mac_release",
-            "output": {
-                "outputOnFailure": true
-            },
-            "execution": {
-                "noTestsAction": "error",
-                "stopOnFailure": true
-            }
+            "inherits": "test_common",
+            "configurePreset": "mac_release"
         },
         {
             "name": "mingw_debug",
-            "configurePreset": "mingw_debug",
-            "output": {
-                "outputOnFailure": true
-            },
-            "execution": {
-                "noTestsAction": "error",
-                "stopOnFailure": true
-            }
+            "inherits": "test_common",
+            "configurePreset": "mingw_debug"
         },
         {
             "name": "mingw_release",
-            "configurePreset": "mingw_release",
-            "output": {
-                "outputOnFailure": true
-            },
-            "execution": {
-                "noTestsAction": "error",
-                "stopOnFailure": true
-            }
+            "inherits": "test_common",
+            "configurePreset": "mingw_release"
         },
         {
             "name": "msvc_debug",
-            "configurePreset": "msvc_debug",
-            "output": {
-                "outputOnFailure": true
-            },
-            "execution": {
-                "noTestsAction": "error",
-                "stopOnFailure": true
-            }
+            "inherits": "test_common",
+            "configurePreset": "msvc_debug"
         },
         {
             "name": "msvc_release",
-            "configurePreset": "msvc_release",
-            "output": {
-                "outputOnFailure": true
-            },
-            "execution": {
-                "noTestsAction": "error",
-                "stopOnFailure": true
-            }
+            "inherits": "test_common",
+            "configurePreset": "msvc_release"
+        },
+        {
+            "name": "codespaces_debug",
+            "inherits": "test_common",
+            "configurePreset": "codespaces_debug"
+        },
+        {
+            "name": "codespaces_release",
+            "inherits": "test_common",
+            "configurePreset": "codespaces_release"
+        },
+        {
+            "name": "linux_debug",
+            "inherits": "test_common",
+            "configurePreset": "linux_debug"
+        },
+        {
+            "name": "linux_release",
+            "inherits": "test_common",
+            "configurePreset": "linux_release"
         }
     ],
     "workflowPresets": [
@@ -247,6 +278,74 @@
                 {
                     "type": "test",
                     "name": "msvc_release"
+                }
+            ]
+        },
+        {
+            "name": "codespaces_debug",
+            "steps": [
+                {
+                    "type": "configure",
+                    "name": "codespaces_debug"
+                },
+                {
+                    "type": "build",
+                    "name": "codespaces_debug"
+                },
+                {
+                    "type": "test",
+                    "name": "codespaces_debug"
+                }
+            ]
+        },
+        {
+            "name": "codespaces_release",
+            "steps": [
+                {
+                    "type": "configure",
+                    "name": "codespaces_release"
+                },
+                {
+                    "type": "build",
+                    "name": "codespaces_release"
+                },
+                {
+                    "type": "test",
+                    "name": "codespaces_release"
+                }
+            ]
+        },
+        {
+            "name": "linux_debug",
+            "steps": [
+                {
+                    "type": "configure",
+                    "name": "linux_debug"
+                },
+                {
+                    "type": "build",
+                    "name": "linux_debug"
+                },
+                {
+                    "type": "test",
+                    "name": "linux_debug"
+                }
+            ]
+        },
+        {
+            "name": "linux_release",
+            "steps": [
+                {
+                    "type": "configure",
+                    "name": "linux_release"
+                },
+                {
+                    "type": "build",
+                    "name": "linux_release"
+                },
+                {
+                    "type": "test",
+                    "name": "linux_release"
                 }
             ]
         }
