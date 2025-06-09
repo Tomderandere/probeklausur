@@ -7,15 +7,6 @@
 // Prüft, ob die Werte in v in absteigender Reihenfolge sortiert sind.
 bool is_sorted_ascending(std::vector<int> const& v)
 {
-    if (v.empty()) {
-        return true;
-    }
-
-    for (size_t i = 1; i < v.size(); ++i) {
-        if (v[i] < v[i - 1]) {
-            return false;
-        }
-    }
-
-    return true;
+    // TODO
+    return false;
 }
