@@ -1,7 +1,7 @@
 #ifndef AUFGABE_2_H
 #define AUFGABE_2_H
 
-#include <cstddef> // für size_t
+#include <cstddef>
 
 /// Repräsentiert ein Element in einer verketteten Liste.
 struct Element {

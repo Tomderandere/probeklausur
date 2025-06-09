@@ -1,6 +1,7 @@
 #ifndef AUFGABE_6_H
 #define AUFGABE_6_H
 
+#include <cstddef>
 #include <string>
 
 /// Repräsentiert einen Knoten in einem binären Suchbaum.

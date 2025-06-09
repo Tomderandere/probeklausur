@@ -1,6 +1,7 @@
 #ifndef AUFGABE_3_H
 #define AUFGABE_3_H
 
+#include <cstddef>
 #include <vector>
 
 /// Repräsentiert ein Element in einer verketteten Liste.

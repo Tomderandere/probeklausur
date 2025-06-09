@@ -1,6 +1,8 @@
 #ifndef AUFGABE_5_H
 #define AUFGABE_5_H
 
+#include <cstddef>
+
 /// Repräsentiert einen Knoten in einem binären Suchbaum.
 struct Node {
     int key;

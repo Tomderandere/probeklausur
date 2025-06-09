@@ -2,6 +2,7 @@
 #define AUFGABE_4_H
 
 #include <algorithm>
+#include <cstddef>
 #include <vector>
 
 /// Erwartet zwei Vektoren und liefert true, falls diese die gleichen Elemente
