@@ -7,7 +7,6 @@
 // Prüft, ob die Werte in v in absteigender Reihenfolge sortiert sind.
 bool is_sorted_ascending(std::vector<int> const& v)
 {
-    // begin:solution
     if (v.empty()) {
         return true;
     }
@@ -19,5 +18,4 @@ bool is_sorted_ascending(std::vector<int> const& v)
     }
 
     return true;
-    // end:solution
 }

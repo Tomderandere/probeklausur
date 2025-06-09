@@ -8,7 +8,6 @@
 // enthalten. Die Reihefolge der Elemente muss dabei nicht gleich sein.
 bool same_elements(std::vector<int> a, std::vector<int> b)
 {
-    // begin:solution
     if (a.size() != b.size()) {
         return false;
     }
@@ -22,5 +21,4 @@ bool same_elements(std::vector<int> a, std::vector<int> b)
         }
     }
     return true;
-    // end:solution
 }

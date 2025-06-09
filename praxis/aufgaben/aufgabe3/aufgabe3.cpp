@@ -8,7 +8,6 @@
 // Falls `this` ein leeres Element ist, wird ein leerer Vektor geliefert.
 std::vector<int> Element::values()
 {
-    // begin:solution
     if (is_empty()) {
         return {};
     }
@@ -17,5 +16,4 @@ std::vector<int> Element::values()
         result.push_back(v);
     }
     return result;
-    // end:solution
 }

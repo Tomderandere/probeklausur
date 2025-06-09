@@ -8,7 +8,6 @@
 // Liefert einen Nullpointer, wenn der Baum leer ist.
 Node* Node::min_node()
 {
-    // begin:solution
     if (is_empty()) {
         return nullptr;
     }
@@ -16,5 +15,4 @@ Node* Node::min_node()
         return this;
     }
     return left->min_node();
-    // end:solution
 }

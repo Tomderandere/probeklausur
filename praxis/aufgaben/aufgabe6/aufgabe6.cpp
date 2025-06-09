@@ -12,7 +12,6 @@
 // geliefert. Wenn der Knoten nicht gefunden wird, wird ein "X" geliefert.
 std::string Node::path(int key_)
 {
-    // begin:solution
     if (is_empty()) {
         return "X";
     }
@@ -27,5 +26,4 @@ std::string Node::path(int key_)
     }
     auto right_result = right->path(key_);
     return right_result == "X" ? "X" : "R" + right_result;
-    // end:solution
 }
