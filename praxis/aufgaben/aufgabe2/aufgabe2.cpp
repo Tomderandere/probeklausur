@@ -2,11 +2,15 @@
  * ERREICHBARE PUNKTE: 10
  */
 
-#include "aufgabe2.h"
+#include "aufgabe2.h"SS
 
 // Liefert die Laenge der Liste, beginnend mit `this`.
 size_t Element::length()
 {
-    // TODO
-    return 0;
+    if (next==nullptr)
+    {
+       return 0;
+    }
+    
+    return next->length()+1;
 }
