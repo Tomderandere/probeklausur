@@ -8,6 +8,13 @@
 // Falls `this` ein leeres Element ist, wird ein leerer Vektor geliefert.
 std::vector<int> Element::values()
 {
-    // TODO
-    return {};
+    if (next==nullptr)
+    {
+        return {};
+    }
+    std::vector<int> results;
+    results.push_back(value);
+    std::vector<int> rest = next-> values();
+    results.insert(results.end(), rest.begin(), rest.end());
+    return results;
 }
