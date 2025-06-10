@@ -13,24 +13,30 @@
 // geliefert. Wenn der Knoten nicht gefunden wird, wird ein "X" geliefert.
 std::string Node::path(int key_)
 {
-
+std::string result;
     if (this->is_empty())
  {
     return "X";
  }
-   if (this->key==key_)
+   if (key==key_)
    {
     return "";
    }
  
-   if (this->key < key_&& this->right != nullptr)
+   if (key < key_)
    {
-    return "R"+this->right->path(key_);
+    result= "R"+right->path(key_);
    }
-    if (this->key > key_&& this->left != nullptr)
+    if (key > key_)
    {
-   return "L"+this->left->path(key_);
+   result= "L"+left->path(key_);
    }
+for (size_t i = 0; i < result.size(); i++)
+{
+   if (result[i]=='X'){
+ return "X";
+   }
+}
 
-    return "X";
+   return result;
 }
