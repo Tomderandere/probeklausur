@@ -14,3 +14,6 @@ size_t Element::length()
     
     return next->length()+1;
 }
+// alternativ auch if (this->is_empty))
+// pfeil weil this ein pointer ist
+// return 1+ (*next).lenght() alternativ

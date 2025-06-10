@@ -4,7 +4,7 @@
 
 #include "aufgabe1.h"
 
-// Prüft, ob die Werte in v in absteigender Reihenfolge sortiert sind.
+// Prüft, ob die Werte in v in aufsteigender Reihenfolge sortiert sind.
 bool is_sorted_ascending(std::vector<int> const& v)
 {
    if (v.size()==0)
