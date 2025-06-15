@@ -1,7 +1,5 @@
 #include <catch2/catch_test_macros.hpp>
-#include <vector>
-#include <algorithm>
-#include <leaders.cpp>
+#include "leaders.h"
 
 TEST_CASE("find leaders") {
     std::vector<int> input{5, 3, 8, 2, 7, 4};
