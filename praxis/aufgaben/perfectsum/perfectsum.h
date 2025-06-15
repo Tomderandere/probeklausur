@@ -3,5 +3,5 @@
 #include "algorithm"
 #include "vector"
 
-std::vector<int> perfectsum( const std::vector<int> & list);
+std::vector<int> perfectsum( const std::vector<int> & list, const int & goal);
 #endif
