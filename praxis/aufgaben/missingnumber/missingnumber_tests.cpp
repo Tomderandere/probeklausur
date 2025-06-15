@@ -10,3 +10,13 @@ TEST_CASE("find number") {
 
     REQUIRE(result == expected);
 }
+
+TEST_CASE("find number one") {
+    std::vector<int> input{4, 2, 3, 6, 5};
+    int expected = 1;    
+
+    int result = missingnumber(input);
+
+
+    REQUIRE(result == expected);
+}
